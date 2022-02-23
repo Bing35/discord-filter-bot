@@ -49,7 +49,7 @@ async function profanityFilter(message){
     }
     
     if(hasProfanity){
-        newContent = `@${message.author.username} meant to say:\n${newContent}`
+        newContent = `<@${message.author.id}> meant to say:\n${newContent}`
         await message.reply(newContent)
         try{
             await message.delete()
